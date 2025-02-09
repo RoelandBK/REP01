@@ -1,0 +1,191 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.header {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.user-info, .project-info {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.user-info label, .project-info label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.user-info input, .project-info input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.user-info input:focus, .project-info input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.month-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.month-label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.2em;
+}
+
+.month {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.day {
+    width: 24px;
+    height: 24px;
+    background-color: #e0e0e0;
+    margin: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 4px;
+    animation: pulse 0.5s ease-in-out;
+}
+
+.day:hover {
+    transform: scale(1.1);
+}
+
+.day.green {
+    background-color: #4caf50;
+}
+
+.day.red {
+    background-color: #f44336;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.improvement {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #777;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0;
+    border-radius: 20px;
+    transition: width 0.5s;
+}
+
+.social-share {
+    margin-top: 20px;
+}
+
+.social-share button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-share button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .user-info input, .project-info input {
+        font-size: 0.9em;
+    }
+
+    .month-label {
+        font-size: 1em;
+    }
+
+    .day {
+        width: 20px;
+        height: 20px;
+    }
+}

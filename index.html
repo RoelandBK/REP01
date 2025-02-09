@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incremental</title>
+    <meta name="description" content="Track your progress and improve incrementally with our interactive calendar.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+    </script>
+    <!-- Open Graph Meta Tags for SEO and Social Sharing -->
+    <meta property="og:title" content="Incremental Progress Tracker">
+    <meta property="og:description" content="Track your progress and improve incrementally with our interactive calendar.">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+</head>
+<body>
+    <div class="header">
+        <h1>Incremental</h1>
+    </div>
+    <div class="container">
+        <div class="user-info">
+            <label for="user-name">Name:</label>
+            <input type="text" id="user-name" placeholder="Enter your name">
+        </div>
+        <div class="project-info">
+            <label for="project-name">Project:</label>
+            <input type="text" id="project-name" placeholder="Enter your project">
+        </div>
+        <div class="calendar">
+            <!-- Month labels and days will be generated here -->
+        </div>
+        <div class="improvement">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            Improvement: <span id="improvement-percentage">0</span>%
+        </div>
+        <div class="social-share">
+            <button onclick="shareOnTwitter()">Share on Twitter</button>
+            <button onclick="shareOnFacebook()">Share on Facebook</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
